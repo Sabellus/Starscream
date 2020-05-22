@@ -60,7 +60,7 @@ public struct HTTPWSHeader {
                 origin = hostUrl.absoluteString
                 origin.remove(at: origin.index(before: origin.endIndex))
             }
-            req.setValue(origin, forHTTPHeaderField: HTTPWSHeader.originName)
+            //req.setValue(origin, forHTTPHeaderField: HTTPWSHeader.originName)
         }
         req.setValue(HTTPWSHeader.upgradeValue, forHTTPHeaderField: HTTPWSHeader.upgradeName)
         req.setValue(HTTPWSHeader.connectionValue, forHTTPHeaderField: HTTPWSHeader.connectionName)
@@ -146,3 +146,4 @@ public extension URL {
         return URLParts(port: port, host: host, isTLS: isTLS)
     }
 }
+
